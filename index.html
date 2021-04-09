@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Southern Lights</title>
+</head>
+<body>
+    <div class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+
+            </ul>
+    </div>
+    <div class="container1">
+    <div class="box1">
+        <h2 class="heading">The Beauty of the Southern Lights</h2>
+    </div>
+
+    <div class="box2">
+        <h3 class="intro">
+          An aurora is a natural electric phenomenon that creates bright and colorful light displays in the sky. They are common at higher latitudes, mostly within the Arctic and the Antarctic Circles.
+    </div>
+
+    <div class="box3">
+        <h4 class="article">
+          The auroras become mirror images of each other once again after the solar winds, which are also magnetic, drape around the planet and flow away from the sun-facing side of Earth. This creates a “magnetotail.”</p>
+          The color of the light released depends on the kind of gas molecules, their electrical state at the time of collision, and the type of the solar wind particles they collide with. Oxygen atoms emit yellow-green or red colored light, while nitrogen atoms generate blue or purplish-red colored light. A mix of gases in the Earth’s atmosphere creates multicolored auroras.
+
+          Because particles from solar winds continually enter the Earth’s atmosphere and interact with gas atoms, aurora displays can be static as well as dynamic – they can change shape and colors, and pulsate in the skies.
+        </h4>
+      </div>
+    </div>
+
+
+    <!--Gallery-->
+    <div class="whitebg">
+      <div class="container2">
+          <div class="img1">
+            <img src="cecil-peak-queenstown-nz.webp" class="ifit">
+            <figcaption>Cecil Peak, NZ</figcaption>
+          </div>
+          <div class="img2">
+            <img src="lake-wakatipu-nz.webp" class="ifit">
+            <figcaption>Lake Wakatipu, NZ</figcaption>
+          </div>
+          <div class="img2">
+            <img src="antarctica-aurora.webp" class="ifit">
+            <figcaption>Antarctica</figcaption>
+          </div>              
+          </div>
+      </div>
+    </div>
+
+    
+    <!--Footer-->
+    <div class="footer">
+      <p>&copy; 2021 Coded by <a href="#">Letícia Amorim</a></p>
+  </div>
+    <script>
+        var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+    </script>
+</body>
+</html>
